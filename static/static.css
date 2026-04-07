@@ -77,6 +77,38 @@ nav {
     background-color: transparent;
     color: var(--acc-primary);
     border: 2px solid var(--acc-primary);
+}.btn-social {
+    padding: 12px 30px;
+    border-radius: 4px; /* Synced to your brand standard */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-stack); /* Use your global brand font */
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: none;
+}
+
+/* --- SOCIAL SPECIFIC OVERRIDES --- */
+.btn-social {
+    min-width: 120px;
+    color: #ffffff !important; /* Ensure white text regardless of global link styles */
+}
+
+.btn-ig {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-fb {
+    background-color: #1877F2;
+}
+.btn-social:hover { 
+    filter: brightness(1.1);
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-secondary:hover { background-color: rgba(100, 255, 218, 0.1); }
