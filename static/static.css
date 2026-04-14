@@ -494,3 +494,217 @@ code {
     gap: 15px;
     flex-wrap: wrap;
 }
+
+.field-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.field-card {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid var(--acc-primary);
+    transition: transform 0.3s ease;
+}
+
+.field-card.demo {
+    border-top: 4px solid #f09433; /* Distinct color for Demo vs Hospital */
+}
+
+.field-card:hover {
+    transform: translateY(-5px);
+}
+
+.field-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--acc-primary);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.field-card.demo .field-tag {
+    color: #f09433;
+}
+
+.field-card h3 {
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.field-meta {
+    color: var(--txt-muted);
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.field-details {
+    list-style: none;
+    font-size: 0.95rem;
+    color: var(--txt-main);
+}
+
+.field-details li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.field-details li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--acc-primary);
+}
+/* --- FIELD CARD PHOTO GALLERY --- */
+.field-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two pictures side-by-side */
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.field-photo {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    background: var(--bg-primary);
+    aspect-ratio: 4 / 3; /* Keeps all photos uniform */
+}
+
+.field-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    opacity: 0.8; /* Slightly dimmed for the aesthetic */
+}
+
+.field-photo:hover img {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.field-photo span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: rgba(10, 25, 47, 0.8);
+    color: var(--acc-primary);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mobile fix for photos */
+@media (max-width: 480px) {
+    .field-gallery {
+        grid-template-columns: 1fr; /* Stack photos on small screens */
+    }
+}
+
+/* --- TIMELINE DESIGN --- */
+.milestone-container {
+    padding: 80px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: rgba(100, 255, 218, 0.1);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    border: 2px solid var(--acc-primary);
+    z-index: 2;
+}
+
+.timeline-dot.live {
+    background: var(--acc-primary);
+    box-shadow: 0 0 10px var(--acc-primary);
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 255, 218, 0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: var(--acc-primary);
+    transform: translateX(10px);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: var(--acc-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tag-live {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid var(--acc-primary);
+    border-radius: 4px;
+    color: var(--acc-primary);
+}
+
+.timeline-content p {
+    color: var(--txt-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .timeline-content {
+        padding: 20px;
+    }
+}

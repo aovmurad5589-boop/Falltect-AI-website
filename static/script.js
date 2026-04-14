@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. Download Interaction Tracking (Alpha Test) ---
     const downloadBtns = document.querySelectorAll('.download-btn');
     const discordbtn = document.querySelector('.discord-btn');
+    const inviteBotBtn = document.querySelector('.invite-bot-btn');
 
     discordbtn.addEventListener('click', (e) => {
         window.open("https://discord.com/channels/@me");
@@ -34,4 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open("https://docs.google.com/forms/d/e/1FAIpQLSd5Z8d_WjHRkqOS1b2TeVpe2c7q7FB_EpAUBM92VXWHneWDxw/viewform?usp=publish-editor");
         });
     });
+
+    inviteBotBtn.addEventListener('click', (e) => {
+        window.open("https://discord.com/oauth2/authorize?client_id=1455413525274034188&permissions=8&integration_type=0&scope=bot");
+    });
 });
+

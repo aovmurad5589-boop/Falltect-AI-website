@@ -9,11 +9,12 @@
 </head>
 <body>
     <nav>
-        <div class="logo">FallGuard<span>AI</span></div>
+        <div class="logo">Falltect<span>AI</span></div>
         <ul class="nav-links">
             <li><a href="index.html">Solution</a></li>
             <li><a href="bio.html">Leadership</a></li>
-            <li><a href="download.html" class="active">Deployment</a></li>
+            <li><a href="download.html" class="active">Installation</a></li>
+            <li><a href="deployment.html">Deployment</a></li>
             <li><a href="research_paper.html">Research</a></li>
         </ul>
     </nav>
@@ -50,7 +51,8 @@
             <div class="step-card reverse">
                 <div class="step-info">
                     <span class="step-number">02</span>
-                    <h2>สร้าง account discord</h2>
+                    <h2>Create account discord</h2>
+                    <p>create discord account and server for alert notifications and bot <code> |you can invite as many people as you want|</code></p>
                     <p>สร้าง account discord และ server discord</p>
                     <button class="btn-primary-small discord-btn">Go to discord</button>
                 </div>
@@ -63,8 +65,10 @@
                 <div class="step-info">
                     <span class="step-number">03</span>
                     <h2>import discord bot</h2>
-                    <a href="https://discord.com/oauth2/authorize?client_id=1455413525274034188&permissions=8&integration_type=0&scope=bot">Invite the bot to server</a>
-                    <a>invite Discord bot to server เพราะรับการแจ้งเตือน</a>
+                    <p>invite Discord bot to server เพราะรับการแจ้งเตือน</p>
+                    <p>invite Discord bot to server for alert notifications. And detection server link which can be used in your android app</p>
+                    <p><code>A unique temporary ID will be generated for your server everytime the detector app is started</code></p>
+                    <button class="btn-primary-small invite-bot-btn">Invite Bot</button>
                 </div>
                 <div class="step-image">
                     <img src="static/asset/step-3.png" alt="Execution Image" style="transform: scale(0.5);">
@@ -74,8 +78,9 @@
             <div class="step-card reverse">
                 <div class="step-info">
                     <span class="step-number">04</span>
-                    <h2>ขอ server id จาก bot</h2>
+                    <h2>Request server ID</h2>
                     <p>tag bot และพิมพ์ว่า ID save ID ไว้เพื่อใช้ต่อไป</p>
+                    <p>Tag the bot and type "ID" to receive your unique server ID. Save this ID for the next steps.</p>
                 </div>
                 <div class="step-image">
                     <img src="static/asset/step-4.png" alt="Execution Image" style="transform: scale(0.5);">
@@ -85,9 +90,11 @@
             <div class="step-card">
                 <div class="step-info">
                     <span class="step-number">05</span>
-                    <h2>file zip ที่ download แตกไฟล์และ setting </h2>
+                    <h2>Unzip the downloaded file and camera setting</h2>
                     <p>เปิดไฟล์ชื่อ <code>cam_selector.exe</code>. ไฟกล้องจะกะพริบเป็นเวลาหนึ่งก่อน application จะติด จากนั้น นำ ID ที่ได้ไปใส่ใน แถบ ID จากนั้นเลือกกล้องที่ต้องการให้ app เข้าถึง <code>ใส่ URL เฉพาะกล้องวงจรปิดที่เชื่อมต่อ wifi</code> กล้องปกติสามารถเลือกได้เลยโดยไม่ต้องมี URL</p>
                     <p>หลังจากนั้นเลือกความสูงของกล้องเทียบกับพืน และองศาโดย 90 องศาแทนกล้องตั้งตรง(เหมือนมองหน้าผู้ใช้งานตรงๆ) ในขณะที่ 0 องศาแทนกล้อง มองตรงจากบนลงล่าง(vertical)</p>
+                    <p>open file <code>cam_selector.exe</code> the camera light might blink before the application loads after that pass the server ID from the discord bot then select the camera. Incase of security cam pass only the <code>URL of the security camera</code> * USB or other type of cameras can be selected directly</p>
+                    <p>after that select the height of the camera from the ground and the angle of the camera where 90 degree is for camera looking straight at the user while 0 degree is for camera looking straight down(vertical)</p>
                 </div>
                 <div class="step-image">
                     <img src="static/asset/step-5.png" alt="Execution Image" style="transform: scale(0.5);">
@@ -99,6 +106,7 @@
                     <span class="step-number">06</span>
                     <h2>กด RUN <code>mulcam_server.exe</code></h2>
                     <p>หลังจากตั้งค่าเสร็จแล้ว ให้กด RUN <code>mulcam_server.exe * อาจใช้เวลานาน</code> เพื่อเริ่มการทำงานของเซิร์ฟเวอร์ รอ url ส่งมาใน Discord server และนำ url ไปใส่ใน app บนมือถือ</p>
+                    <p>After completing the setup, click RUN on <code>mulcam_server.exe</code> *This may take some time* to start the server. Wait for the URL to be sent in the Discord server and then paste it into the mobile app.</p>
                 </div>
                 <div class="step-image">
                     <img src="static/asset/step-6.png" alt="Execution Image" style="transform: scale(0.5);">
