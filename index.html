@@ -17,17 +17,27 @@
             <li><a href="deployment.html">Deployment</a></li>
             <li><a href="research_paper.html">Research</a></li>
         </ul>
+        <!-- Integrated Clean Language Switcher Element -->
+        <div class="lang-switcher-container">
+            <button class="lang-btn" data-lang-select="en">EN</button>
+            <button class="lang-btn" data-lang-select="th">TH</button>
+        </div>
     </nav>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Autonomous Fall Detection.</h1>
-                <p>ระบบตรวจจับการล้มโหลด <code>ฟรี!!!!</code></p>
-                <p> falltect = fall + detect ระบบตรวจจับการล้มอัตโนมัติ ที่สามารถ run ในอุปกรณ์ราคาถูก(low end equipment)ได้ </p>
+                <h1 data-en="Autonomous Fall Detection." data-th="ระบบตรวจจับการล้มอัตโนมัติ">Autonomous Fall Detection.</h1>
+                
+                <!-- Cleaned up the messy mixed languages and raw code tags -->
+                <p data-en="<code>Free + open-source</code> safety solution software to run computer vision on low-end hardware with <code>high accuracy</code>." 
+                   data-th="ระบบตรวจจับการล้มอัตโนมัติประสิทธิภาพสูง เปิดให้ใช้งานฟรี ออกแบบมาเพื่อประมวลผลบนอุปกรณ์ฮาร์ดแวร์ทั่วไปได้ โดยไม่ต้องพึ่งพาคอมพิวเตอร์สเปกสูง">
+                    An open-source, edge-optimized safety solution designed to run local computer vision on low-end hardware without compromising privacy.
+                </p>
+                
                 <div class="cta-group">
-                    <button class="btn-primary" onclick="navigateTo('download.html')">Get the Core Pack</button>
-                    <button class="btn-secondary" onclick="navigateTo('bio.html')">Meet the Founder</button>
+                    <button class="btn-primary" onclick="navigateTo('download.html')" data-en="Get the Core Pack" data-th="ดาวน์โหลดซอฟต์แวร์">Get the Core Pack</button>
+                    <button class="btn-secondary" onclick="navigateTo('bio.html')" data-en="Meet the Founder" data-th="เกี่ยวกับผู้พัฒนา">Meet the Founder</button>
                     <button class="btn-social btn-ig" onclick="window.open('https://www.instagram.com/nottofall_project/', '_blank')">Instagram</button>
                     <button class="btn-social btn-fb" onclick="window.open('https://www.facebook.com/profile.php?id=61574333881825', '_blank')">Facebook</button>
                 </div>
@@ -38,47 +48,64 @@
         </section>
 
         <section class="features">
-            <h2>Why Institutional Leaders Choose Falltect AI</h2>
+            <h2 data-en="Why you should Choose Falltect AI" data-th="ทำไมองค์กรชั้นนำจึงเลือก Falltect AI">Why Institutional Leaders Choose Falltect AI</h2>
             <div class="feature-grid">
                 <div class="feature-card">
-                    <h3>99.2% Accuracy</h3>
-                    <p>Trained on specialized datasets to minimize false positives while ensuring critical events are never missed.</p>
+                    <h3 data-en="99.2% Accuracy" data-th="ความแม่นยำ 99.2%">99.2% Accuracy</h3>
+                    <p data-en="Trained on specialized datasets to minimize false positives while ensuring critical events are never missed." 
+                       data-th="ทดสอบและฝึกฝนระบบด้วยชุดข้อมูลเฉพาะทาง เพื่อลดการแจ้งเตือนผิดพลาด (False Positives) และไม่พลาดทุกเหตุการณ์สำคัญ">
+                        Trained on specialized datasets to minimize false positives while ensuring critical events are never missed.
+                    </p>
                 </div>
                 <div class="feature-card">
-                    <h3>Privacy-First</h3>
-                    <p>All processing happens locally on the edge device. No video ever leaves the facility.</p>
+                    <h3 data-en="Privacy-First" data-th="ระบบรักษาความเป็นส่วนตัว">Privacy-First</h3>
+                    <p data-en="All processing happens locally on the edge device. No video stream ever leaves the facility." 
+                       data-th="การประมวลผลทั้งหมดเกิดขึ้นภายในอุปกรณ์ (Edge Device) ข้อมูลวิดีโอจะไม่ถูกส่งออกภายนอกหน่วยงาน เพื่อความปลอดภัยสูงสุด">
+                        All processing happens locally on the edge device. No video ever leaves the facility.
+                    </p>
                 </div>
                 <div class="feature-card">
-                    <h3>Rapid Alerting</h3>
-                    <p>Average latency from fall event to alert dispatch is under 1.5 seconds.</p>
+                    <h3 data-en="Rapid Alerting" data-th="แจ้งเตือนทันท่วงที">Rapid Alerting</h3>
+                    <p data-en="Average latency from fall event to alert dispatch is under 1.5 seconds." 
+                       data-th="ความหน่วงเฉลี่ยตั้งแต่เริ่มล้มจนถึงการส่งสัญญาณแจ้งเตือน ต่ำกว่า 1.5 วินาที">
+                        Average latency from fall event to alert dispatch is under 1.5 seconds.
+                    </p>
                 </div>
             </div>
         </section>
+
         <section class="disclaimer-container">
-            <h3>Limitation of Liability & User Agreement</h3>
+            <h3 data-en="Limitation of Liability & User Agreement" data-th="ข้อจำกัดความรับผิดชอบและข้อตกลงการใช้งาน">Limitation of Liability & User Agreement</h3>
             <div class="disclaimer-content">
                 <p>
-                    <strong>Educational Use:</strong> Falltect AI is an innovation prototype developed for educational and research purposes. 
-                    It is <strong>not</strong> a certified medical device and should be treated as a technical demonstration.
+                    <strong data-en="Educational Use:" data-th="วัตถุประสงค์การใช้งานเพื่อการศึกษา:">Educational Use:</strong> 
+                    <span data-en="Falltect AI is an innovation prototype developed for educational and research purposes. It is not a certified medical device and should be treated as a technical demonstration." 
+                          data-th="Falltect AI เป็นต้นแบบนวัตกรรมที่พัฒนาขึ้นเพื่อวัตถุประสงค์ทางการศึกษาและการวิจัย เทคโนโลยีนี้ไม่ใช่เครื่องมือทางการแพทย์ที่ได้รับการรับรอง และควรใช้เป็นระบบสาธิตทางเทคนิคเท่านั้น">
+                        Falltect AI is an innovation prototype developed for educational and research purposes. It is not a certified medical device and should be treated as a technical demonstration.
+                    </span>
                 </p>
                 <p style="margin-top: 15px;">
-                    <strong>System Limitations:</strong> While powered by advanced AI—including Random Forest and XGBoost architectures—the system may not detect all falls (False Negatives) or may trigger false alerts. 
-                    Performance is strictly dependent on camera placement, environmental lighting, and network stability.
+                    <strong data-en="System Limitations:" data-th="ข้อจำกัดของระบบ:">System Limitations:</strong> 
+                    <span data-en="While powered by advanced AI—including Random Forest and XGBoost architectures—the system may not detect all falls (False Negatives) or may trigger false alerts. Performance is strictly dependent on camera placement, environmental lighting, and network stability."
+                          data-th="แม้ว่าระบบจะขับเคลื่อนด้วยสถาปัตยกรรม AI ขั้นสูงรวมถึง Random Forest และ XGBoost แต่ระบบอาจไม่ได้ตรวจจับการล้มได้ครบทั้งหมด 100% หรืออาจเกิดการแจ้งเตือนผิดพลาดได้ ประสิทธิภาพของระบบขึ้นอยู่กับการจัดวางตำแหน่งกล้อง แสงสว่างในสภาพแวดล้อม และความเสถียรของเครือข่าย">
+                        While powered by advanced AI—including Random Forest and XGBoost architectures—the system may not detect all falls (False Negatives) or may trigger false alerts. Performance is strictly dependent on camera placement, environmental lighting, and network stability.
+                    </span>
                 </p>
                 <p style="margin-top: 15px;">
-                    <strong>Non-Substitution:</strong> This system is an <strong>assistive tool</strong> only. 
-                    It must <strong>not</strong> replace human supervision, professional care, or established emergency services.
+                    <strong data-en="Non-Substitution:" data-th="ข้อพิจารณาการใช้งาน:">Non-Substitution:</strong> 
+                    <span data-en="This system is an assistive tool only. It must not replace human supervision, professional care, or established emergency services."
+                          data-th="ระบบนี้เป็นเพียงเครื่องมือช่วยเหลือทางเทคโนโลยีเท่านั้น ไม่สามารถทดแทนการดูแลโดยมนุษย์ การพยาบาลวิชาชีพ หรือระบบบริการฉุกเฉินหลักได้">
+                        This system is an assistive tool only. It must not replace human supervision, professional care, or established emergency services.
+                    </span>
                 </p>
                 <p style="margin-top: 15px; border-top: 1px solid rgba(100, 255, 218, 0.1); padding-top: 15px;">
-                    <strong>Liability Agreement:</strong> Use of this research and any associated software (including .exe and .apk deployments) is at your own risk. 
-                    The developers and founders are <strong>not liable</strong> for any injuries, medical emergencies, or damages resulting from the use or failure of this system.
+                    <strong data-en="Liability Agreement:" data-th="ข้อตกลงความรับผิดชอบ:">Liability Agreement:</strong> 
+                    <span data-en="Use of this research and any associated software (including .exe and .apk deployments) is at your own risk. The developers and founders are not liable for any injuries, medical emergencies, or damages resulting from the use or failure of this system."
+                          data-th="การใช้งานซอฟต์แวร์นี้ (รวมถึงการใช้งานผ่านไฟล์ .exe และ .apk) เป็นความเสี่ยงของผู้ใช้เอง ผู้พัฒนาและผู้ก่อตั้งจะไม่รับผิดชอบต่อการบาดเจ็บ เหตุฉุกเฉินทางการแพทย์ หรือความเสียหายใด ๆ ที่เกิดจากการใช้งานหรือความล้มเหลวของระบบนี้">
+                        Use of this research and any associated software (including .exe and .apk deployments) is at your own risk. The developers and founders are not liable for any injuries, medical emergencies, or damages resulting from the use or failure of this system.
+                    </span>
                 </p>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </section>
     </main>
 

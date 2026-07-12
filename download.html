@@ -17,12 +17,17 @@
             <li><a href="deployment.html">Deployment</a></li>
             <li><a href="research_paper.html">Research</a></li>
         </ul>
+        <!-- Integrated Clean Language Switcher Element -->
+        <div class="lang-switcher-container">
+            <button class="lang-btn" data-lang-select="en">EN</button>
+            <button class="lang-btn" data-lang-select="th">TH</button>
+        </div>
     </nav>
 
     <main>
         <section class="download-hero">
             <h1>Deployment Protocol</h1>
-            <p>Follow the technical walkthrough below to initialize the FallGuard environment.</p>
+            <p>Software demonstration</p>
             
             <div class="vdo-main-container">
                 <div class="vdo-wrapper">
@@ -39,12 +44,14 @@
                 <div class="step-info">
                     <span class="step-number">01</span>
                     <h2>Environment Setup</h2>
-                    <p>Download .exe and .apk file by filling the form </p>
-                    <p>ลงชื่อเข้าใช้เพื่อขอรับไฟล์</p>
+                    <p data-en="Download .exe and .apk file by filling the form" 
+                       data-th="ดาวน์โหลดไฟล์ .exe และ .apk โดยการกรอกแบบฟอร์ม">
+                        Download .exe and .apk file by filling the form
+                    </p>
                     <button class="btn-primary-small download-btn">Download</button>
                 </div>
                 <div class="step-image">
-                    <img src="static/asset/step-1.png" alt="Setup Image" style="transform: scale(0.5);">
+                    <img src="static/asset/step-1.png" alt="Setup Image">
                 </div>
             </div>
 
@@ -52,12 +59,14 @@
                 <div class="step-info">
                     <span class="step-number">02</span>
                     <h2>Create account discord</h2>
-                    <p>create discord account and server for alert notifications and bot <code> |you can invite as many people as you want|</code></p>
-                    <p>สร้าง account discord และ server discord</p>
+                    <p data-en="Create a Discord account and server for alert notifications and bot <code> |you can invite as many people as you want|</code>" 
+                       data-th="สร้าง account discord และ server discord">
+                        Create a Discord account and server for alert notifications and bot <code> |you can invite as many people as you want|</code>
+                    </p>
                     <button class="btn-primary-small discord-btn">Go to discord</button>
                 </div>
                 <div class="step-image">
-                    <img src="static/asset/step-2.png" alt="Hardware Image" style="transform: scale(0.5);">
+                    <img src="static/asset/step-2.png" alt="Setup Image">
                 </div>
             </div>
 
@@ -65,13 +74,15 @@
                 <div class="step-info">
                     <span class="step-number">03</span>
                     <h2>import discord bot</h2>
-                    <p>invite Discord bot to server เพราะรับการแจ้งเตือน</p>
-                    <p>invite Discord bot to server for alert notifications. And detection server link which can be used in your android app</p>
+                    <p data-en="Invite the Discord bot to your server for alert notifications. And provide the detection server link which can be used in your android app" 
+                       data-th="เชิญ Discord bot เข้าสู่ server ของคุณเพื่อรับการแจ้งเตือน และให้ลิงก์เซิร์ฟเวอร์การตรวจจับที่สามารถใช้ในแอป Android ของคุณ">
+                        Invite the Discord bot to your server for alert notifications. And provide the detection server link which can be used in your android app
+                    </p>
                     <p><code>A unique temporary ID will be generated for your server everytime the detector app is started</code></p>
                     <button class="btn-primary-small invite-bot-btn">Invite Bot</button>
                 </div>
                 <div class="step-image">
-                    <img src="static/asset/step-3.png" alt="Execution Image" style="transform: scale(0.5);">
+                    <img src="static/asset/step-3.png" alt="Setup Image">
                 </div>
             </div>
 
@@ -79,11 +90,13 @@
                 <div class="step-info">
                     <span class="step-number">04</span>
                     <h2>Request server ID</h2>
-                    <p>tag bot และพิมพ์ว่า ID save ID ไว้เพื่อใช้ต่อไป</p>
-                    <p>Tag the bot and type "ID" to receive your unique server ID. Save this ID for the next steps.</p>
+                    <p data-en="the bot and type ID to receive your unique server ID. Save this ID for the next steps." 
+                       data-th="แท็ก bot และพิมพ์ว่า ID เพื่อรับ ID server ที่เป็นของคุณ บันทึก ID นี้เพื่อใช้ในขั้นตอนถัดไป">
+                        the bot and type ID to receive your unique server ID. Save this ID for the next steps.
+                    </p>
                 </div>
                 <div class="step-image">
-                    <img src="static/asset/step-4.png" alt="Execution Image" style="transform: scale(0.5);">
+                    <img src="static/asset/step-4.png" alt="Setup Image">
                 </div>
             </div>
 
@@ -91,25 +104,33 @@
                 <div class="step-info">
                     <span class="step-number">05</span>
                     <h2>Unzip the downloaded file and camera setting</h2>
-                    <p>เปิดไฟล์ชื่อ <code>cam_selector.exe</code>. ไฟกล้องจะกะพริบเป็นเวลาหนึ่งก่อน application จะติด จากนั้น นำ ID ที่ได้ไปใส่ใน แถบ ID จากนั้นเลือกกล้องที่ต้องการให้ app เข้าถึง <code>ใส่ URL เฉพาะกล้องวงจรปิดที่เชื่อมต่อ wifi</code> กล้องปกติสามารถเลือกได้เลยโดยไม่ต้องมี URL</p>
-                    <p>หลังจากนั้นเลือกความสูงของกล้องเทียบกับพืน และองศาโดย 90 องศาแทนกล้องตั้งตรง(เหมือนมองหน้าผู้ใช้งานตรงๆ) ในขณะที่ 0 องศาแทนกล้อง มองตรงจากบนลงล่าง(vertical)</p>
-                    <p>open file <code>cam_selector.exe</code> the camera light might blink before the application loads after that pass the server ID from the discord bot then select the camera. Incase of security cam pass only the <code>URL of the security camera</code> * USB or other type of cameras can be selected directly</p>
-                    <p>after that select the height of the camera from the ground and the angle of the camera where 90 degree is for camera looking straight at the user while 0 degree is for camera looking straight down(vertical)</p>
+                    <p data-en="Open the file named <code>cam_selector.exe</code>. The camera light will blink for a moment before the application loads. Then, enter the server ID received from the Discord bot and select the camera. For security cameras, provide only the <code>URL of the security camera</code>. Regular cameras can be selected directly without a URL."
+                       data-th="เปิดไฟล์ชื่อ <code>cam_selector.exe</code>. ไฟกล้องจะกะพริบเป็นเวลาหนึ่งก่อน application จะติด จากนั้น นำ ID ที่ได้ไปใส่ใน แถบ ID จากนั้นเลือกกล้องที่ต้องการให้ app เข้าถึง <code>ใส่ URL เฉพาะกล้องวงจรปิดที่เชื่อมต่อ wifi</code> กล้องปกติสามารถเลือกได้เลยโดยไม่ต้องมี URL">
+                        Open the file named <code>cam_selector.exe</code>. The camera light will blink for a moment before the application loads. Then, enter the server ID received from the Discord bot and select the camera. For security cameras, provide only the <code>URL of the security camera</code>. Regular cameras can be selected directly without a URL.
+                    </p>
+                    <p data-en="After that, select the height of the camera from the ground and the angle of the camera where 90 degrees is for a camera looking straight at the user, while 0 degrees is for a camera looking straight down (vertical)."
+                       data-th="หลังจากนั้นเลือกความสูงของกล้องเทียบกับพื้น และองศาของกล้อง โดย 90 องศาคือกล้องที่มองตรงกับผู้ใช้งาน ในขณะที่ 0 องศาคือกล้องที่มองลงมาตรง (แนวตั้ง)">
+                        After that, select the height of the camera from the ground and the angle of the camera where 90 degrees is for a camera looking straight at the user, while 0 degrees is for a camera looking straight down (vertical).
+                    </p>
                 </div>
                 <div class="step-image">
-                    <img src="static/asset/step-5.png" alt="Execution Image" style="transform: scale(0.5);">
+                    <img src="static/asset/step-5.png" alt="Setup Image">
                 </div>
             </div>
 
             <div class="step-card reverse">
                 <div class="step-info">
                     <span class="step-number">06</span>
-                    <h2>กด RUN <code>mulcam_server.exe</code></h2>
-                    <p>หลังจากตั้งค่าเสร็จแล้ว ให้กด RUN <code>mulcam_server.exe * อาจใช้เวลานาน</code> เพื่อเริ่มการทำงานของเซิร์ฟเวอร์ รอ url ส่งมาใน Discord server และนำ url ไปใส่ใน app บนมือถือ</p>
-                    <p>After completing the setup, click RUN on <code>mulcam_server.exe</code> *This may take some time* to start the server. Wait for the URL to be sent in the Discord server and then paste it into the mobile app.</p>
+                    <h2 data-en="Press RUN <code>mulcam_server.exe</code>" data-th="กด RUN <code>mulcam_server.exe</code>">
+                        Press RUN <code>mulcam_server.exe</code>
+                    </h2>
+                    <p data-en="After completing the setup, click RUN on <code>mulcam_server.exe</code> *This may take some time* to start the server. Wait for the URL to be sent in the Discord server and then paste it into the mobile app."
+                       data-th="หลังจากตั้งค่าเสร็จแล้ว ให้กด RUN <code>mulcam_server.exe * อาจใช้เวลานาน</code> เพื่อเริ่มการทำงานของเซิร์ฟเวอร์ รอ url ส่งมาใน Discord server และนำ url ไปใส่ใน app บนมือถือ">
+                        After completing the setup, click RUN on <code>mulcam_server.exe</code> *This may take some time* to start the server. Wait for the URL to be sent in the Discord server and then paste it into the mobile app.
+                    </p>
                 </div>
                 <div class="step-image">
-                    <img src="static/asset/step-6.png" alt="Execution Image" style="transform: scale(0.5);">
+                    <img src="static/asset/step-6.png" alt="Setup Image">
                 </div>
             </div>
         </section>

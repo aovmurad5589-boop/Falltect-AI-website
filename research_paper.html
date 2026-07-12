@@ -41,6 +41,11 @@
             <li><a href="deployment.html">Deployment</a></li>
             <li><a href="research_paper.html" class="active">Research</a></li>
         </ul>
+        <!-- Integrated Clean Language Switcher Element -->
+        <div class="lang-switcher-container">
+            <button class="lang-btn" data-lang-select="en">EN</button>
+            <button class="lang-btn" data-lang-select="th">TH</button>
+        </div>
     </nav>
 
     <main class="container" style="max-width: 1100px; margin: 0 auto; padding: 40px 8%;">
@@ -50,20 +55,38 @@
         </header>
 
         <div class="research-meta">
-            <p style="color: var(--txt-muted);">Document: <strong>Falltect_Architecture_v0.9.pdf</strong></p>
-            <a href="static/docs/researchpaper.pdf" class="btn-primary-small" download>Download Offline Copy</a>
+            <!-- Translatable document title text label -->
+            <p style="color: var(--txt-muted);">
+                Document: <strong id="research-doc-label" data-doc-en="Falltect_Architecture_EN.pdf" data-doc-th="Falltect_Architecture_TH.pdf">Falltect_Architecture_EN.pdf</strong>
+            </p>
+            
+            <!-- Translatable offline download action button -->
+            <a href="static/docs/researchpaper_en.pdf" 
+               id="research-download-btn" 
+               class="btn-primary-small" 
+               data-en="Download Offline Copy" 
+               data-th="ดาวน์โหลดเอกสารออฟไลน์"
+               data-file-en="static/docs/researchpaper_en.pdf" 
+               data-file-th="static/docs/researchpaper_th.pdf" 
+               download>
+               Download Offline Copy
+            </a>
         </div>
 
         <div class="pdf-viewer-container">
+            <!-- Translatable iframe viewer instance -->
             <iframe 
-                src="static/docs/researchpaper.pdf" 
+                id="research-iframe"
+                src="static/docs/researchpaper_en.pdf" 
+                data-iframe-en="static/docs/researchpaper_en.pdf"
+                data-iframe-th="static/docs/researchpaper_th.pdf"
                 width="100%" 
                 height="100%" 
                 style="border: none;">
                 <div class="pdf-fallback">
-                    <h3>Technical Viewer Unavailable</h3>
-                    <p>Your current browser configuration is blocking the embedded research viewer.</p>
-                    <a href="static/docs/researchpaper.pdf" class="btn-primary" target="_blank">
+                    <h3 data-en="Technical Viewer Unavailable" data-th="ไม่สามารถเปิดระบบแสดงผลเอกสารได้">Technical Viewer Unavailable</h3>
+                    <p data-en="Your current browser configuration is blocking the embedded research viewer." data-th="เบราว์เซอร์ของคุณกำลังบล็อกระบบแสดงผลเอกสารที่ฝังตัวอยู่">Your current browser configuration is blocking the embedded research viewer.</p>
+                    <a href="static/docs/researchpaper_en.pdf" id="research-fallback-btn" class="btn-primary" target="_blank" data-en="Open Research Paper in New Tab" data-th="เปิดเอกสารงานวิจัยในแท็บใหม่">
                         Open Research Paper in New Tab
                     </a>
                 </div>
@@ -82,30 +105,39 @@
         </div>
 
         <section class="disclaimer-container">
-            <h3>Limitation of Liability & User Agreement</h3>
+            <h3 data-en="Limitation of Liability & User Agreement" data-th="ข้อจำกัดความรับผิดชอบและข้อตกลงการใช้งาน">Limitation of Liability & User Agreement</h3>
             <div class="disclaimer-content">
                 <p>
-                    <strong>Educational Use:</strong> Falltect AI is an innovation prototype developed for educational and research purposes. 
-                    It is <strong>not</strong> a certified medical device and should be treated as a technical demonstration.
+                    <strong data-en="Educational Use:" data-th="วัตถุประสงค์การใช้งานเพื่อการศึกษา:">Educational Use:</strong> 
+                    <span data-en="Falltect AI is an innovation prototype developed for educational and research purposes. It is not a certified medical device and should be treated as a technical demonstration." 
+                          data-th="Falltect AI เป็นต้นแบบนวัตกรรมที่พัฒนาขึ้นเพื่อวัตถุประสงค์ทางการศึกษาและการวิจัย เทคโนโลยีนี้ไม่ใช่เครื่องมือทางการแพทย์ที่ได้รับการรับรอง และควรใช้เป็นระบบสาธิตทางเทคนิคเท่านั้น">
+                        Falltect AI is an innovation prototype developed for educational and research purposes. It is not a certified medical device and should be treated as a technical demonstration.
+                    </span>
                 </p>
                 <p style="margin-top: 15px;">
-                    <strong>System Limitations:</strong> While powered by advanced AI—including Random Forest and XGBoost architectures—the system may not detect all falls (False Negatives) or may trigger false alerts. 
-                    Performance is strictly dependent on camera placement, environmental lighting, and network stability.
+                    <strong data-en="System Limitations:" data-th="ข้อจำกัดของระบบ:">System Limitations:</strong> 
+                    <span data-en="While powered by advanced AI—including Random Forest and XGBoost architectures—the system may not detect all falls (False Negatives) or may trigger false alerts. Performance is strictly dependent on camera placement, environmental lighting, and network stability."
+                          data-th="แม้ว่าระบบจะขับเคลื่อนด้วยสถาปัตยกรรม AI ขั้นสูงรวมถึง Random Forest และ XGBoost แต่ระบบอาจไม่ได้ตรวจจับการล้มได้ครบทั้งหมด 100% หรืออาจเกิดการแจ้งเตือนผิดพลาดได้ ประสิทธิภาพของระบบขึ้นอยู่กับการจัดวางตำแหน่งกล้อง แสงสว่างในสภาพแวดล้อม และความเสถียรของเครือข่าย">
+                        While powered by advanced AI—including Random Forest and XGBoost architectures—the system may not detect all falls (False Negatives) or may trigger false alerts. Performance is strictly dependent on camera placement, environmental lighting, and network stability.
+                    </span>
                 </p>
                 <p style="margin-top: 15px;">
-                    <strong>Non-Substitution:</strong> This system is an <strong>assistive tool</strong> only. 
-                    It must <strong>not</strong> replace human supervision, professional care, or established emergency services.
+                    <strong data-en="Non-Substitution:" data-th="ข้อพิจารณาการใช้งาน:">Non-Substitution:</strong> 
+                    <span data-en="This system is an assistive tool only. It must not replace human supervision, professional care, or established emergency services."
+                          data-th="ระบบนี้เป็นเพียงเครื่องมือช่วยเหลือทางเทคโนโลยีเท่านั้น ไม่สามารถทดแทนการดูแลโดยมนุษย์ การพยาบาลวิชาชีพ หรือระบบบริการฉุกเฉินหลักได้">
+                        This system is an assistive tool only. It must not replace human supervision, professional care, or established emergency services.
+                    </span>
                 </p>
                 <p style="margin-top: 15px; border-top: 1px solid rgba(100, 255, 218, 0.1); padding-top: 15px;">
-                    <strong>Liability Agreement:</strong> Use of this research and any associated software (including .exe and .apk deployments) is at your own risk. 
-                    The developers and founders are <strong>not liable</strong> for any injuries, medical emergencies, or damages resulting from the use or failure of this system.
+                    <strong data-en="Liability Agreement:" data-th="ข้อตกลงความรับผิดชอบ:">Liability Agreement:</strong> 
+                    <span data-en="Use of this research and any associated software (including .exe and .apk deployments) is at your own risk. The developers and founders are not liable for any injuries, medical emergencies, or damages resulting from the use or failure of this system."
+                          data-th="การใช้งานซอฟต์แวร์นี้ (รวมถึงการใช้งานผ่านไฟล์ .exe และ .apk) เป็นความเสี่ยงของผู้ใช้เอง ผู้พัฒนาและผู้ก่อตั้งจะไม่รับผิดชอบต่อการบาดเจ็บ เหตุฉุกเฉินทางการแพทย์ หรือความเสียหายใด ๆ ที่เกิดจากการใช้งานหรือความล้มเหลวของระบบนี้">
+                        Use of this research and any associated software (including .exe and .apk deployments) is at your own risk. The developers and founders are not liable for any injuries, medical emergencies, or damages resulting from the use or failure of this system.
+                    </span>
                 </p>
+                <br>
+                <br>
             </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
         </section>
     </main>
 
